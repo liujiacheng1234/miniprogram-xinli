@@ -1,0 +1,5 @@
+/* pages/ware/wareDetail/wareDetail.wxss */
+image{
+    width: 100%;
+    height: 35rem;
+}

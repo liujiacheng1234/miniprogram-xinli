@@ -1,0 +1,47 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/record/record",
+        
+        "pages/person/person",
+        "pages/person/add/add",
+
+        "pages/ceramic/ceramic",
+        "pages/ceramic/detailed/detailed",
+
+        "pages/ware/ware",
+        "pages/ware/wareDetail/wareDetail",
+        "pages/waterproof/waterproof",
+        "pages/decoration/decoration"
+
+
+    ],
+    "tabBar": {
+        "selectedColor": "#0be886",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "./image/icon0.png",
+                "selectedIconPath": "./image/icon0.png"
+            },
+            {
+                "pagePath": "pages/person/person",
+                "text": "个人中心",
+                "iconPath": "./image/icon0.png",
+                "selectedIconPath": "./image/icon0.png"
+            }
+        ]
+    },
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F6F6F6",
+        "navigationBarTitleText": "练习",
+        "navigationBarTextStyle": "black",
+
+        "enablePullDownRefresh": false
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
+}

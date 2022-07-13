@@ -1,0 +1,7 @@
+<!--pages/record/record.wxml-->
+
+<!--商品增删改查-->
+<view>
+    <button type="primary" bindtap="addGoogs">增加商品</button>
+    <button type="primary">查询商品</button>
+</view>

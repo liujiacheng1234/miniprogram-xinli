@@ -1,0 +1,29 @@
+<!--pages/index/index.wxml-->
+
+<!--页面顶部-->
+<swiper indicator-dots="true" 
+        autoplay="true" 
+        interval="2000" 
+        duration="500" 
+        easing-function="linear"
+        circular="true" 
+        class='swiper-block'>
+    
+    <block wx:for='{{images}}' wx:key='index'>
+      <swiper-item>
+        <image src='{{item}}' mode='aspectFill' class='swiper-item-images'/>
+      </swiper-item>
+    </block>
+</swiper>
+
+<!--页面中间-->
+<view class="middle">
+    <view class="optionView">
+        <view class="inner" hover-class="hover" bindtap="ceramic"></view>
+        <view class="inner" hover-class="hover" bindtap="ware"></view>
+    </view>
+    <view class="optionView">
+        <view class="inner" hover-class="hover" bindtap="waterproof"></view>
+        <view class="inner" hover-class="hover" bindtap="decoration"></view>
+    </view>
+</view>

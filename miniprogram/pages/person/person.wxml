@@ -1,0 +1,5 @@
+<!--pages/person/person.wxml-->
+<button bindtap="login">授权登录{{openpid}}</button>
+<view class="add" hover-class="hcls" bindtap="tap">管理员添加</view>
+<view class="add" hover-class="hcls" bindtap="tapLove">点赞</view>
+

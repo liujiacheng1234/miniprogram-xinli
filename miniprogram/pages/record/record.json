@@ -1,0 +1,5 @@
+{
+    "usingComponents": {},
+    "navigationBarTitleText": "商品列表刷新",
+    "enablePullDownRefresh": true
+}

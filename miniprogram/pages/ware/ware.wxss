@@ -1,0 +1,25 @@
+/* pages/ware/ware.wxss */
+.goods{
+    width: 720rpx;
+    height: 15vh;
+    background-color: rgba(67, 64, 228, 0.747);
+    border-radius: 10px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+}
+
+.goods-L{
+    width: 15vh;
+}
+image {
+    height: 15vh;
+    width: 100%;
+    border-radius: 10rpx;
+}
+
+.hcls {
+    background-color: rgb(90, 84, 84);
+}

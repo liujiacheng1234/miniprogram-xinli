@@ -1,0 +1,20 @@
+/* pages/person/add/add.wxss */
+input{
+    border: 1px solid gray;
+    height: 35px;
+}
+.picker{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    justify-content: center;
+    font-size: 22px;
+    
+}
+.section{
+    justify-content: center;
+    background-color: rgb(190, 206, 206);
+    border: 1px solid gray;
+}
+text{
+    font-size: 22px;
+}

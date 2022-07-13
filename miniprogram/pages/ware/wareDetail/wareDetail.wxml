@@ -1,0 +1,9 @@
+<!--pages/ware/wareDetail/wareDetail.wxml-->
+<!--pages/ceramic/detailed/detailed.wxml-->
+<view bindtap="showDetailed">
+    <image src="{{goods[0].img}}" mode="aspectFit"></image>
+</view>
+<view class="botoom">
+    <view style="text-align: center; text-transform: uppercase; margin-top: 3px;"><text style="font-size: larger; color: brown;">点击图片查看细节</text></view>
+    <view></view>
+</view>

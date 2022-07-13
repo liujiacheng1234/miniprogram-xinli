@@ -1,0 +1,69 @@
+.swiper-item-images {
+    width: 700rpx;
+    height: 25vh;
+    border-radius: 30rpx;
+    margin-left: 25rpx;
+}
+
+.swiper-block {
+    width: 750rpx;
+    height: 25vh;
+    margin-top: 2vh;
+}
+
+.swiper-block .wx-swiper-dot {
+    width: 30rpx;
+    height: 12rpx;
+    display: inline-flex;
+    margin-left: 15rpx;
+    border-radius: 6rpx;
+}
+
+.swiper-block .wx-swiper-dots.wx-swiper-dots-horizontal {
+    margin-bottom: -4rpx;
+}
+
+.swiper-block .wx-swiper-dot::before {
+    content: '';
+    background: rgba(255, 255, 255, 0.2);
+    flex-grow: 1;
+}
+
+.swiper-block .wx-swiper-dot-active::before {
+    content: '';
+    background: #0be886;
+    flex-grow: 1;
+    border-radius: 6rpx;
+}
+
+.middle {
+    height: 30rem;
+}
+
+.inner {
+    width: 280rpx;
+    height: 30vh;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    background-color: rosybrown;
+    border-radius: 20px;
+}
+
+.inner-button {
+    padding: 0%;
+    margin: 0%;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    background-color: rosybrown;
+    border-radius: 20px;
+}
+
+.hover {
+    background-color: rgb(90, 84, 84);
+}
+
+.optionView {
+    margin-top: 5vh;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
