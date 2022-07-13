@@ -1,39 +1,101 @@
 // pages/ceramic/detailed/detailed.js
 let li
+let id
+let dianzhan = false
+let namel
+let imgU
 Page({
-    
+
     /**
      * 页面的初始数据
      */
     data: {
-        list :[],
+        list: [],
+        imgUrl: '../../../image/zNoo.png'
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        console.log('携带的参数',options)
-        var id = options.id
-        
+        console.log('携带的参数', options)
+        id = options.id
         wx.cloud.database().collection('ceramic').doc(id)
-         .get().then(res =>{
-            console.log('请求成功',res)
-            this.setData({
-                list:res.data
+            .get().then(res => {
+                console.log('请求成功', res)
+                this.setData({
+                    list: res.data
+                })
+                li = res.data
+                imgU = res.data.img
+                namel = res.data.name
             })
-            li = res.data
-            console.log('请求',li)
-            
-        })
-        .catch(err => {
-            console.log('请求失败',err)
+            .catch(err => {
+                console.log('请求失败', err)
+            })
+        //查询喜欢表是否存在
+        wx.cloud.database().collection('love').doc(id)
+            .get().then(res => {
+                console.log('love请求成功', res)
+                this.setData({
+                    imgUrl: "../../../image/z.png",
+                })
+                dianzhan = true
+            })
+            .catch(err => {
+                console.log('love请求失败', err)
+                this.setData({
+                    imgUrl: "../../../image/zNoo.png"
+                })
+            })
+
+    },
+
+    //查看大图片
+    showDetailed() {
+        wx.previewImage({
+            urls: [li.img],
         })
     },
-    //查看大图片
-    showDetailed(){
-        wx.previewImage({
-          urls: [li.img],
-        })
+    z() {
+        if (dianzhan) {
+            wx.cloud.database().collection('love').doc(id)
+            .remove()
+            .then(res=>{
+                console.log('移除点赞成功')
+                wx.showToast({
+                    title: '移除点赞成功',
+                })
+            })
+            .catch(err=>{
+                console.log('点赞失败')
+            })
+            this.setData({
+                imgUrl: "../../../image/zNoo.png"
+            })
+            dianzhan = false
+        } else {
+            wx.cloud.database().collection('love')
+            .add({
+                data:{
+                    name:namel,
+                    img:imgU,
+                    _id:id
+                }
+            })
+            .then(res=>{
+                console.log('点赞成功')
+                wx.showToast({
+                    title: '点赞成功',
+                })
+            })
+            .catch(err=>{
+                console.log('点赞失败')
+            })
+            this.setData({
+                imgUrl: "../../../image/z.png"
+            })
+            dianzhan = true
+        }
     },
 
     /**
@@ -68,7 +130,7 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh() {
-       
+
     },
 
     /**
