@@ -54,7 +54,9 @@ Page({
         
     },
     tapLove(){
-
+        wx.navigateTo({
+            url: '/pages/person/love/love',
+          })
     },
 
     /**

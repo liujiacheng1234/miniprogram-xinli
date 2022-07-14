@@ -1,0 +1,11 @@
+<!--pages/person/love/love.wxml-->
+<view wx:for="{{list}}" wx:key="_id" style="justify-content: space-evenly; display: grid;">
+    <navigator hover-class="hcls" class="goods" url="/pages/ceramic/detailed/detailed?id={{item._id}}">
+        <view class="goods-L">
+            <image mode="aspectFill" lazy-load src="{{item.img}}"></image>
+        </view>
+        <view class="goods-R">
+            商品名字:{{item.name}}
+        </view>
+    </navigator>
+</view>

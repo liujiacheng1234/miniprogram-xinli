@@ -5,6 +5,7 @@
         
         "pages/person/person",
         "pages/person/add/add",
+        "pages/person/love/love",
 
         "pages/ceramic/ceramic",
         "pages/ceramic/detailed/detailed",
