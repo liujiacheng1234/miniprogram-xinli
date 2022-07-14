@@ -1,5 +1,20 @@
 <!--pages/person/person.wxml-->
-<button bindtap="login">授权登录{{openpid}}</button>
-<view class="add" hover-class="hcls" bindtap="tap">管理员添加</view>
-<view class="add" hover-class="hcls" bindtap="tapLove">点赞</view>
+<view class="top-login">
+    <button bindtap="login" type="primary" wx:if="{{!userInfo}}" class="login-but">授权登录</button>
+    <view class="top-img" wx:else="{{userInfo}}">
+        <image src="{{userInfo.avatarUrl}}" class="toxiang"></image>
+        {{userInfo.nickName}}
+        <button bindtap="outLogin">退出登录</button>
+    </view>
+</view>
+<view class="massage">
+    <view class="add" hover-class="hcls" bindtap="tap">
+        <text class="text_i">管理员添加</text>
+        <image src="../../image/zhixiang.png" class="zhi_img"></image>
+    </view>
+    <view class="add" hover-class="hcls" bindtap="tapLove">
+        <text class="text_i">收藏</text>
+        <image src="../../image/zhixiang.png" class="zhi_img"></image>
+    </view>
+</view>
 

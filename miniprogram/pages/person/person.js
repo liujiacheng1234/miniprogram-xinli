@@ -5,25 +5,38 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        userInfo:"",
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        
+        let user = wx.getStorageSync('user')
+        this.setData({
+            userInfo:user,
+        })
     },
     login(){
         wx.getUserProfile({
           desc: '用于查看点赞',
-          success(res){
-            console.log('授权成功', res)
+          success:res=>{
+            wx.setStorageSync('user', res.userInfo)
+            console.log('用户信息',res.userInfo)
+            this.setData({
+                userInfo:res.userInfo,
+            })
           },
-          fail(err){
-            console.log('授权失败', err)
+          fail:err=>{
+              console.log('授权失败', err)
           }
         })
+    },
+    outLogin(){
+        this.setData({
+            userInfo:'',
+        })
+        wx.setStorageSync('user', '')
     },
     tap(){
         wx.cloud.callFunction({

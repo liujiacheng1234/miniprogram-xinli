@@ -1,1 +1,47 @@
 /* pages/person/person.wxss */
+.top-login{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #B8B8B8;
+    height: 300rpx;
+}
+
+.login-but{
+    margin-top: 230rpx;
+}
+
+.top-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toxiang{
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.massage{
+    background-color: #C8C8C8;
+}
+
+.add{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom:solid rgb(77, 87, 90);
+}
+
+text{
+    margin-left: 20px;
+    font-style: unset;
+    font-size: 18px;
+}
+
+.zhi_img{
+    float: right;
+    width: 28px;
+    height: 28px;
+    margin-right: 20px;
+}

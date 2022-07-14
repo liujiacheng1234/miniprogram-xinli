@@ -8,7 +8,7 @@
             "list": [
                 {
                     "name": "",
-                    "pathName": "pages/person/add/add",
+                    "pathName": "pages/person/person",
                     "query": "",
                     "launchMode": "default",
                     "scene": null
