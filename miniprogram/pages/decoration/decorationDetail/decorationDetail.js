@@ -1,4 +1,4 @@
-// pages/ware/wareDetail/wareDetail.js
+// pages/decoration/decorationDetail/decorationDetail.js
 let li
 let id
 let dianzhan = false
@@ -19,7 +19,7 @@ Page({
     onLoad(options) {
         console.log('携带的参数', options)
         id = options.id
-        wx.cloud.database().collection('ware').doc(id)
+        wx.cloud.database().collection('decoration').doc(id)
             .get().then(res => {
                 console.log('请求成功', res)
                 this.setData({
@@ -97,7 +97,6 @@ Page({
             dianzhan = true
         }
     },
-
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -137,7 +136,7 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom() {
-        console.log('下拉触底了')
+
     },
 
     /**

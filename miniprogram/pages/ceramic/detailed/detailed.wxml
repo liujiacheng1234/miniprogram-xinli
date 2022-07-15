@@ -1,5 +1,5 @@
 <!--pages/ceramic/detailed/detailed.wxml-->
-<view bindtap="showDetailed">
+<view bindtap="showDetailed" class="top">
     <image src="{{list.img}}" mode="aspectFit" class="top"></image>
 </view>
 <view class="botoom">
@@ -8,7 +8,7 @@
         <image src="{{imgUrl}}" mode="aspectFit" class="z" bindtap="z"></image>
     </view>
     <view style="text-align: center; text-transform: uppercase; margin-top: vh;">
-        <text style="font-size: larger; color: brown;">点赞收藏不迷路</text>
+        <text style="font-size: larger; color: brown;">点击收藏</text>
     </view>
     
 </view>

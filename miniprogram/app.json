@@ -6,14 +6,19 @@
         "pages/person/person",
         "pages/person/add/add",
         "pages/person/love/love",
+        "pages/person/love/loveDetail/loveDetail",
 
         "pages/ceramic/ceramic",
         "pages/ceramic/detailed/detailed",
 
         "pages/ware/ware",
         "pages/ware/wareDetail/wareDetail",
+
         "pages/waterproof/waterproof",
-        "pages/decoration/decoration"
+        "pages/waterproof/waterproofDetail/waterproofDetail",
+
+        "pages/decoration/decoration",
+        "pages/decoration/decorationDetail/decorationDetail"
 
 
     ],

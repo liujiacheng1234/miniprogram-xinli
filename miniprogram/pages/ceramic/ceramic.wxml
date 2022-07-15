@@ -5,7 +5,7 @@
             <image mode="aspectFill" lazy-load src="{{item.img}}"></image>
         </view>
         <view class="goods-R">
-            商品名字:{{item.name}}
+            <text>{{item.name}}</text>
         </view>
     </navigator>
 </view>

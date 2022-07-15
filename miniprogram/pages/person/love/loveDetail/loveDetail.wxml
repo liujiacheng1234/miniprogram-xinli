@@ -1,5 +1,4 @@
-<!--pages/ware/wareDetail/wareDetail.wxml-->
-<!--pages/ceramic/detailed/detailed.wxml-->
+<!--pages/person/love/loveDetail/loveDetail.wxml-->
 <view bindtap="showDetailed" class="top">
     <image src="{{list.img}}" mode="aspectFit" class="top"></image>
 </view>

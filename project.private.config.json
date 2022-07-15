@@ -12,6 +12,27 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/ceramic/ceramic",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/ceramic/detailed/detailed",
+                    "query": "id=ca780ad562c578b70a03bfd621c2d170",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/person/love/love",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }

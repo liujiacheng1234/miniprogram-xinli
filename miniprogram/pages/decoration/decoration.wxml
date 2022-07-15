@@ -1,11 +1,11 @@
 <!--pages/decoration/decoration.wxml-->
 <view wx:for="{{list}}" wx:key="_id" style="justify-content: space-evenly; display: grid;">
-    <navigator hover-class="hcls" class="goods" url="/pages/ceramic/detailed/detailed?id={{item._id}}">
+    <navigator hover-class="hcls" class="goods" url="/pages/decoration/decorationDetail/decorationDetail?id={{item._id}}">
         <view class="goods-L">
             <image mode="aspectFill" lazy-load src="{{item.img}}"></image>
         </view>
         <view class="goods-R">
-            商品名字:{{item.name}}
+            <text>{{item.name}}</text>
         </view>
     </navigator>
 </view>

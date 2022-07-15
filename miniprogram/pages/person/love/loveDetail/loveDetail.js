@@ -1,4 +1,4 @@
-// pages/ware/wareDetail/wareDetail.js
+// pages/ceramic/detailed/detailed.js
 let li
 let id
 let dianzhan = false
@@ -11,7 +11,7 @@ Page({
      */
     data: {
         list: [],
-        imgUrl: '../../../image/zNoo.png'
+        imgUrl: '../../../../image/zNoo.png'
     },
     /**
      * 生命周期函数--监听页面加载
@@ -19,7 +19,7 @@ Page({
     onLoad(options) {
         console.log('携带的参数', options)
         id = options.id
-        wx.cloud.database().collection('ware').doc(id)
+        wx.cloud.database().collection('love').doc(id)
             .get().then(res => {
                 console.log('请求成功', res)
                 this.setData({
@@ -37,14 +37,14 @@ Page({
             .get().then(res => {
                 console.log('love请求成功', res)
                 this.setData({
-                    imgUrl: "../../../image/z.png",
+                    imgUrl: "../../../../image/z.png",
                 })
                 dianzhan = true
             })
             .catch(err => {
                 console.log('love请求失败', err)
                 this.setData({
-                    imgUrl: "../../../image/zNoo.png"
+                    imgUrl: "../../../../image/zNoo.png"
                 })
             })
 
@@ -70,7 +70,7 @@ Page({
                 console.log('收藏失败')
             })
             this.setData({
-                imgUrl: "../../../image/zNoo.png"
+                imgUrl: "../../../../image/zNoo.png"
             })
             dianzhan = false
         } else {
@@ -92,7 +92,7 @@ Page({
                 console.log('收藏失败')
             })
             this.setData({
-                imgUrl: "../../../image/z.png"
+                imgUrl: "../../../../image/z.png"
             })
             dianzhan = true
         }
@@ -137,7 +137,7 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom() {
-        console.log('下拉触底了')
+
     },
 
     /**

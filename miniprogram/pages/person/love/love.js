@@ -23,6 +23,7 @@ Page({
         .get().then(res =>{
             console.log('请求成功',res)
             let dataList= res.data
+            console.log('s',dataList)
             if(dataList.length<=0){
                 wx.showToast({
                   title: '没有更多数据了',
@@ -36,6 +37,7 @@ Page({
             console.log('请求失败',err)
         })
     },
+
 
     /**
      * 生命周期函数--监听页面初次渲染完成

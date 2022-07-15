@@ -61,13 +61,13 @@ Page({
             wx.cloud.database().collection('love').doc(id)
             .remove()
             .then(res=>{
-                console.log('移除点赞成功')
+                console.log('移除收藏成功')
                 wx.showToast({
-                    title: '移除点赞成功',
+                    title: '移除收藏成功',
                 })
             })
             .catch(err=>{
-                console.log('点赞失败')
+                console.log('收藏失败')
             })
             this.setData({
                 imgUrl: "../../../image/zNoo.png"
@@ -83,13 +83,13 @@ Page({
                 }
             })
             .then(res=>{
-                console.log('点赞成功')
+                console.log('收藏成功')
                 wx.showToast({
-                    title: '点赞成功',
+                    title: '收藏成功',
                 })
             })
             .catch(err=>{
-                console.log('点赞失败')
+                console.log('收藏失败')
             })
             this.setData({
                 imgUrl: "../../../image/z.png"

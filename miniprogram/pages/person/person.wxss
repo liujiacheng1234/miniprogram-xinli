@@ -2,7 +2,7 @@
 .top-login{
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: #B8B8B8;
+    background-color:#62d2a2;
     height: 300rpx;
 }
 
@@ -24,13 +24,18 @@
 }
 
 .massage{
-    background-color: #C8C8C8;
+    background-color: #d7fbe8;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hcls{
+    background-color: #1fab89;
 }
 
 .add{
     padding-top: 15px;
     padding-bottom: 15px;
-    border-bottom:solid rgb(77, 87, 90);
+    border-bottom:1px solid rgb(77, 87, 90);
 }
 
 text{
