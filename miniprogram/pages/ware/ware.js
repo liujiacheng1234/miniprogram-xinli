@@ -5,38 +5,50 @@ Page({
      * 页面的初始数据
      */
     data: {
-
-    },  
+        list:[]
+    },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
+        this.getlist()
         // wx.cloud.callFunction({
-        //     name:'wareData',
+        //     name:'getDatabase',
         // })
         // .then(res=>{
         //     console.log('云函数调用成功',res)
         //     this.setData({
         //         openid:res.result.openid,
-        //         goods:res.result.data
+        //         list:res.result.data
         //     })
         // })
         // .catch(err=>{
         //     console.log('云函数调用失败',err)
         // })
+    },
+    getlist(){
+        let len = this.data.list.length
+        console.log('当前list长度',len)
+        //加载数据
         wx.cloud.database().collection('ware')
+        .skip(len)
         .get().then(res =>{
             console.log('请求成功',res)
+            let dataList= res.data
+            if(dataList.length<=0){
+                wx.showToast({
+                  title: '没有更多数据了',
+                })
+            }
             this.setData({
-                goods:res.data
+                list:this.data.list.concat(res.data)
             })
         })
         .catch(err => {
             console.log('请求失败',err)
         })
     },
-
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -76,7 +88,8 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom() {
-
+        console.log('下拉触底了')
+        this.getlist()
     },
 
     /**

@@ -1,11 +1,11 @@
 <!--pages/ware/ware.wxml-->
-<view wx:for="{{goods}}" wx:key="_id" style="justify-content: space-evenly; display: grid;">
+<view wx:for="{{list}}" wx:key="_id" style="justify-content: space-evenly; display: grid;">
     <navigator hover-class="hcls" class="goods" url="/pages/ware/wareDetail/wareDetail?id={{item._id}}">
         <view class="goods-L">
             <image mode="aspectFill" lazy-load src="{{item.img}}"></image>
         </view>
         <view class="goods-R">
-            商品名字:{{item.name}}
+            <text>{{item.name}}</text>
         </view>
     </navigator>
 </view>
