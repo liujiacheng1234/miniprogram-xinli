@@ -4,6 +4,7 @@ let id
 let dianzhan = false
 let namel
 let imgU
+let zID
 Page({
 
     /**
@@ -33,13 +34,19 @@ Page({
                 console.log('请求失败', err)
             })
         //查询喜欢表是否存在
-        wx.cloud.database().collection('love').doc(id)
+        wx.cloud.database().collection('love')
+        .where({
+            contact_id:id
+        })
             .get().then(res => {
                 console.log('love请求成功', res)
-                this.setData({
-                    imgUrl: "../../../image/z.png",
-                })
-                dianzhan = true
+                if(res.data.length!=0){
+                    this.setData({
+                        imgUrl: "../../../image/z.png",
+                    })
+                    dianzhan = true
+                    zID = res.data[0]._id
+                }
             })
             .catch(err => {
                 console.log('love请求失败', err)
@@ -58,7 +65,7 @@ Page({
     },
     z() {
         if (dianzhan) {
-            wx.cloud.database().collection('love').doc(id)
+            wx.cloud.database().collection('love').doc(zID)
             .remove()
             .then(res=>{
                 console.log('移除收藏成功')
@@ -79,7 +86,7 @@ Page({
                 data:{
                     name:namel,
                     img:imgU,
-                    _id:id
+                    contact_id:id
                 }
             })
             .then(res=>{
