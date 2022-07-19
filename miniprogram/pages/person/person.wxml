@@ -8,7 +8,7 @@
     </view>
 </view>
 <view class="massage">
-    <view class="add" hover-class="hcls" bindtap="tap">
+    <view class="add" hover-class="hcls" bindtap="tap" wx:if="{{manage}}">
         <text class="text_i">管理员添加</text>
         <image src="../../image/zhixiang.png" class="zhi_img"></image>
     </view>

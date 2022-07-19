@@ -16,6 +16,30 @@ Page({
         this.setData({
             userInfo:user,
         })
+
+        wx.cloud.callFunction({
+            name:'getOpenid',
+        })
+        .then(res=>{
+            console.log('云函数调用成功',res)
+            // this.setData({
+            //     id:res.result.openid
+            // })
+            if(res.result.openid=='ooIkW5OZUx5z68G7JjrLSPgLGEDU'){
+                console.log('cheng',res.result.openid)
+                this.setData({
+                    manage:true
+                })
+            }
+            else{
+                this.setData({
+                    manage:false
+                })
+            }
+        })
+        .catch(err=>{
+            console.log('云函数调用失败',err)
+        })
     },
     login(){
         wx.getUserProfile({
@@ -39,32 +63,9 @@ Page({
         wx.setStorageSync('user', '')
     },
     tap(){
-        wx.cloud.callFunction({
-            name:'getOpenid',
-        })
-        .then(res=>{
-            console.log('云函数调用成功',res)
-            this.setData({
-                id:res.result.openid
-            })
-            if(res.result.openid=='ooIkW5OZUx5z68G7JjrLSPgLGEDU'){
-                console.log('cheng',res.result.openid)
-                wx.navigateTo({
-                  url: '/pages/person/add/add',
-                })
-            }
-            else{
-                wx.showToast({
-                    icon:'error',
-                  title: '你不是管理员',
-                })
-            }
-        })
-        .catch(err=>{
-            console.log('云函数调用失败',err)
-        })
-        
-        
+        wx.navigateTo({
+            url: '/pages/person/add/add',
+          })
     },
     tapLove(){
         wx.navigateTo({
