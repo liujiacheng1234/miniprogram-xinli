@@ -25,7 +25,7 @@ Page({
             // this.setData({
             //     id:res.result.openid
             // })
-            if(res.result.openid=='ooIkW5OZUx5z68G7JjrLSPgLGEDU'){
+            if(res.result.openid=='ooIkW5OZUx5z68G7JjrLSPgLGEDU'||res.result.openid=='ooIkW5Lf6i8xEW3Th-G_UMfnORHc'){
                 console.log('cheng',res.result.openid)
                 this.setData({
                     manage:true
@@ -70,6 +70,11 @@ Page({
     tapLove(){
         wx.navigateTo({
             url: '/pages/person/love/love',
+          })
+    },
+    tapGuanYu(){
+        wx.navigateTo({
+            url: '/pages/person/guanyu/guanyu',
           })
     },
 

@@ -1,5 +1,6 @@
 <!--pages/ceramic/ceramic.wxml-->
-<view wx:for="{{list}}" wx:key="_id" style="justify-content: space-evenly; display: grid;">
+<view class="box">
+    <view wx:for="{{list}}" wx:key="_id" class="top_box">
     <navigator hover-class="hcls" class="goods" url="/pages/ceramic/detailed/detailed?id={{item._id}}">
         <view class="goods-L">
             <image mode="aspectFill" lazy-load src="{{item.img}}"></image>
@@ -8,4 +9,6 @@
             <text>{{item.name}}</text>
         </view>
     </navigator>
+</view>
+
 </view>

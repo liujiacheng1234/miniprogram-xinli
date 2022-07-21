@@ -16,5 +16,9 @@
         <text class="text_i">收藏</text>
         <image src="../../image/zhixiang.png" class="zhi_img"></image>
     </view>
+    <view class="add" hover-class="hcls" bindtap="tapGuanYu">
+        <text class="text_i">关于</text>
+        <image src="../../image/zhixiang.png" class="zhi_img"></image>
+    </view>
 </view>
 

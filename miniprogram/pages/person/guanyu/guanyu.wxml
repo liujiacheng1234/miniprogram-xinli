@@ -1,0 +1,18 @@
+<!--pages/person/guanyu/guanyu.wxml-->
+<view>
+    <view>
+        需要购买建材，建议到店门购买，本程序仅支持查看
+    </view>
+    <view>
+        本店位于河源市紫金县蓝塘镇
+    </view>
+    <view>
+        长塘新力建材
+    </view>
+    <view>
+        联系电话：18898556199
+    </view>
+    <view>
+        如有侵权，请联系，立马删除
+    </view>
+</view>

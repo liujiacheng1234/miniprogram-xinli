@@ -33,6 +33,13 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/ceramic/ceramic",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }

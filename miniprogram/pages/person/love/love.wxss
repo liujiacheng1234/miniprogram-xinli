@@ -1,22 +1,33 @@
 /* pages/person/love/love.wxss */
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.top_box{
+    display: flex;
+    margin-top: 6px;
+}
+
 .goods{
     display: flex;
-    width: 720rpx;
-    height: 15vh;
+    width: 340rpx;
+    height: 31vh;
     background-color: #62d2a2;
     border-radius: 10px;
     margin-top: 9px;
     margin-bottom: 9px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    flex-direction: row;
+    flex-direction: column;
 }
-
 .goods-L{
-    width: 15vh;
+    background-color: rgb(228, 224, 220);
 }
 
 .goods-R{
-    margin-left: 30px;
+    margin: 0 auto;
+    margin-top: 2vh;
 }
 
 text{
@@ -25,7 +36,7 @@ text{
 }
 
 image {
-    height: 15vh;
+    height: 23vh;
     width: 100%;
     border-radius: 10rpx;
     box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);

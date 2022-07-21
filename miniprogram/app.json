@@ -1,12 +1,12 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/record/record",
         
         "pages/person/person",
         "pages/person/add/add",
         "pages/person/love/love",
         "pages/person/love/loveDetail/loveDetail",
+        "pages/person/guanyu/guanyu",
 
         "pages/ceramic/ceramic",
         "pages/ceramic/detailed/detailed",
@@ -28,14 +28,14 @@
             {
                 "pagePath": "pages/index/index",
                 "text": "首页",
-                "iconPath": "./image/icon0.png",
-                "selectedIconPath": "./image/icon0.png"
+                "iconPath": "./image/分类.png",
+                "selectedIconPath": "./image/分类.png"
             },
             {
                 "pagePath": "pages/person/person",
                 "text": "个人中心",
-                "iconPath": "./image/icon0.png",
-                "selectedIconPath": "./image/icon0.png"
+                "iconPath": "./image/个人中心.png",
+                "selectedIconPath": "./image/个人中心.png"
             }
         ]
     },
@@ -43,9 +43,8 @@
         "backgroundColor": "#F6F6F6",
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#F6F6F6",
-        "navigationBarTitleText": "练习",
+        "navigationBarTitleText": "新力建材",
         "navigationBarTextStyle": "black",
-
         "enablePullDownRefresh": false
     },
     "sitemapLocation": "sitemap.json",

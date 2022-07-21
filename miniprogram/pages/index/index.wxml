@@ -19,11 +19,19 @@
 <!--页面中间-->
 <view class="middle">
     <view class="optionView">
-        <view class="inner" hover-class="hover" bindtap="ceramic"></view>
-        <view class="inner" hover-class="hover" bindtap="ware"></view>
+        <view class="inner" hover-class="hover" bindtap="ceramic">
+            <image src="../../image/cipian.jpg" mode="aspectFill" class="inner_img"></image>
+        </view>
+        <view class="inner" hover-class="hover" bindtap="ware">
+            <image src="../../image/jieju.jpg" mode="aspectFill" class="inner_img"></image>
+        </view>
     </view>
     <view class="optionView">
-        <view class="inner" hover-class="hover" bindtap="waterproof"></view>
-        <view class="inner" hover-class="hover" bindtap="decoration"></view>
+        <view class="inner" hover-class="hover" bindtap="waterproof">
+            <image src="../../image/fanshui.jpg" mode="aspectFill" class="inner_img"></image>
+        </view>
+        <view class="inner" hover-class="hover" bindtap="decoration">
+            <image src="../../image/zhuangshi.jpg" mode="aspectFill" class="inner_img"></image>
+        </view>
     </view>
 </view>
